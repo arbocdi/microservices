@@ -1,0 +1,123 @@
+﻿<html><head>
+<base href="http://www.cs.unc.edu/~stotts/COMP723-s15/patterns/descrip.html">
+<title>Design Patterns: Descriptions</title>
+
+<link rel="icon" href="data:image/vnd.microsoft.icon;base64,AAABAAEAEBAAAAEAGABoAwAAFgAAACgAAAAQAAAAIAAAAAEAGAAAAAAAQAMAAAAAAAAAAAAAAAAAAAAAAAD////////////////////////////////////////////////////////////////////////79/Xw4tfu3M/////////////////////16+XZtZTix7D27ef////////////////ly7bCizbDjDnev6TevqPXsIrXrobatpbPom++ghG/hSTx4tf////////////////r18jCijHCijXCijTCiSy/hSHBhyjBiC7CijXEjUDEjT3ZtpX17Ob////////t3M/IlFHDizjEjT7DjD7Hkk7PoGvMm2DEjT7EjUDEjkHEjDvAhinIk0zo0b/27urIlVTBiC/EjTzFj0TCijPauJj////ZtJLCiTPEjkLDjDzHkkrEjj+9gADRpHTevaDAhijGkETkybPRpHTAhyjcu53r18nDizfDizbFjj/AhyfYtJLp1MXZtZP27urTqHvAhiTRpXX////Vq4DBiCzPoW7LmVzBiCzIlE7IlE6/hSLdvaD////////////TqH3AhiTRo3H////WrYTCiTDDjD3CizfDizfly7bNnWW+ggzevqH////8+fj////dvaHAhibFj0XkybPRpXbDijXFjkDAhynbuJj////OoGq+ggnXs5Dp08LQo3Lw4NT17unJlVTBiC3EjDvFjkHEjkDCiTPNnGP38ez59PLQo3HAhyvHkkrEjUC+gQDNnWX////w39PLmlzCijTEjT/EjkDDjDzHk1DMnWbKmFrGkEbEjT/DjDzBiC3JlVDs18n////////z5dvFjkLDiznCizfBiTDBiCvAhiTBhyfCiTDEjT7DizbSp3n17eb////////////q1cXBiCm+gg3Rpnbgwafbt5fatZTdvJ7cu57FkEm9gADXsIr////////////////48u7r18natpX27ef////////////////////fwafatpTw39P///////////////////////////////////////////////////////////////////////8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">
+<style id="savepage-cssvariables">
+  :root {
+  }
+</style>
+<script id="savepage-shadowloader" type="application/javascript">
+  "use strict"
+  window.addEventListener("DOMContentLoaded",
+  function(event)
+  {
+    savepage_ShadowLoader(5);
+  },false);
+  function savepage_ShadowLoader(c){createShadowDOMs(0,document.documentElement);function createShadowDOMs(a,b){var i;if(b.localName=="iframe"||b.localName=="frame"){if(a<c){try{if(b.contentDocument.documentElement!=null){createShadowDOMs(a+1,b.contentDocument.documentElement)}}catch(e){}}}else{if(b.children.length>=1&&b.children[0].localName=="template"&&b.children[0].hasAttribute("data-savepage-shadowroot")){b.attachShadow({mode:"open"}).appendChild(b.children[0].content);b.removeChild(b.children[0]);for(i=0;i<b.shadowRoot.children.length;i++)if(b.shadowRoot.children[i]!=null)createShadowDOMs(a,b.shadowRoot.children[i])}for(i=0;i<b.children.length;i++)if(b.children[i]!=null)createShadowDOMs(a,b.children[i])}}}
+</script>
+<meta name="savepage-url" content="http://www.cs.unc.edu/~stotts/COMP723-s15/patterns/descrip.html">
+<meta name="savepage-title" content="Design Patterns: Descriptions">
+<meta name="savepage-from" content="http://www.cs.unc.edu/~stotts/COMP723-s15/patterns/descrip.html">
+<meta name="savepage-date" content="Wed Jul 22 2020 20:00:27 GMT+0300 (Москва, стандартное время)">
+<meta name="savepage-state" content="Standard Items; Retained cross-origin frames; Merged CSS images; Removed unsaved URLs; Max frame depth = 5; Max resource size = 50MB; Max resource time = 10s;">
+<meta name="savepage-version" content="18.0">
+<meta name="savepage-comments" content="">
+  </head>
+
+<body bgcolor="#fffff8">
+
+<h1>How are Patterns Described?</h1>
+
+<img data-savepage-src="pix/gradBlueLR.gif" src="data:image/gif;base64,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">
+<p>
+
+</p><h4>General idea... from Alexander</h4>
+<pre>IF    you find yourself in CONTEXT
+      for example EXAMPLES
+      with PROBLEM
+      entailing FORCES
+THEN  for some REASONS
+      apply DESIGN FORM AND/OR RULES
+      to construct SOLUTION
+      leading to NEW CONTEXT and OTHER PATTERNS
+</pre>
+
+Graphical notations can help, expecially with showing relations
+among pattern objects/classes.  But they are not sufficient.
+
+<p>
+We need to give several types of information about the 
+problem domain, the forces acting in the sytem, and the resolution
+to which a pattern is to be applied.
+
+</p><p>
+This is not the only format used to describe design patterns
+but it is a popular one, from the GoF text.
+</p><p>
+
+</p><ul>
+<table cellpadding="8" border="1">
+<tbody><tr><td><b>name and classification</b>
+</td><td>
+classification by "creational", "structural", "behavioral"
+
+</td></tr><tr><td><b>intent</b>
+</td><td>
+what does the design pattern do? rationale? what design issues or problems 
+does it address?
+
+</td></tr><tr><td><b>aka</b>
+</td><td>
+names that are common as alternatives
+
+
+</td></tr><tr><td><b>motivation</b>
+</td><td>
+scenario to illustrate a design problem and how this pattern solves it.
+
+</td></tr><tr><td><b>applicability</b>
+</td><td>
+situations in which this pattern may be applied? examples of poor
+design to which it may be applied? how can one recognize when to use this
+pattern?
+
+</td></tr><tr><td><b>structure</b>
+</td><td>
+graphical representation of classes (UML)
+
+</td></tr><tr><td><b>participants</b>
+</td><td>
+classes and responsibilities
+
+</td></tr><tr><td><b>collaborations</b>
+</td><td>
+how do these participants interact?
+
+</td></tr><tr><td><b>consequences</b>
+</td><td>
+how does the pattern support the objectives?
+trade offs when using the pattern?
+what system structures may be varied independently of the pattern?
+
+</td></tr><tr><td><b>implementation</b>
+</td><td>
+pitfalls, hints, for using this pattern... language-specific issues
+
+</td></tr><tr><td><b>sample code</b>
+</td><td>
+as extra illustration
+
+</td></tr><tr><td><b>known uses</b>
+</td><td>
+from real systems.  Need at least two frm different domains.
+
+</td></tr><tr><td><b>related patterns</b>
+</td><td>
+are there similar patterns; though related, what are the 
+essential differences?
+what other patterns are generally used with this one?
+
+</td></tr></tbody></table>
+</ul>
+</body><script data-savepage-src="moz-extension://ff0bdfff-cb7a-4f39-a197-a4622934b2d2/js/inject.js"></script></html>
